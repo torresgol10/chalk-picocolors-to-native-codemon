@@ -3,6 +3,11 @@ name: Publish to npm
 on:
   release:
     types: [published]
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+  push:
+    branches: [main]
+    paths:
+      - 'package.json'  # Only trigger on version changes
 
 jobs:
   publish:
