@@ -1,7 +1,14 @@
 {
   "name": "chalk-to-native",
   "version": "1.0.0",
-  "description": "Codemod to migrate chalk and picocolor to native Node.js styleText",
+  "description": "Codemod to migrate chalk and picocolors to native Node.js styleText",
+  "bin": {
+    "chalk-to-native": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "transform.js"
+  ],
   "scripts": {
     "test": "vitest run",
     "codemod": "jscodeshift -t transform.js"
